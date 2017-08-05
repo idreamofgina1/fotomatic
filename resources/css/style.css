@@ -3,6 +3,7 @@
 html {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  margin: 0;
 }
 
 .main-content {
@@ -20,13 +21,6 @@ html {
   color: white;
 }
 
-.image-container {
-  overflow: hidden;
-}
-
-.image-container img {
-  display: block;
-}
 
 @media only screen and (max-width: 760px) {
   .main-content {
@@ -41,6 +35,7 @@ header {
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  z-index: 1;
 }
 
 header .content {
@@ -55,6 +50,7 @@ header .logo {
 
 header nav ul {
   display: flex;
+  flex-grow: 1;
 }
 
 nav li {
@@ -117,6 +113,10 @@ header .mobile {
   justify-content: flex-start;
   align-items: flex-start;
   height: 43.5rem;
+  background-image: url(../images/banner-landingpage.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #sign-up-cta {
@@ -124,6 +124,9 @@ header .mobile {
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
+  position: relative;
+  top: 171px;
+  left: 10%;
 }
 
 #sign-up-cta .content {
@@ -243,6 +246,20 @@ header .mobile {
   color: #4a4a4a;
 }
 
+.feature .content {
+  padding: 2.5rem 0;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+  max-width: 100%;
+}
+
+
 @media only screen and (max-width: 890px) {
   .feature h2 {
     font-size: 1.125rem;
@@ -294,9 +311,16 @@ header .mobile {
 }
 
 #filters-section .images-container {
+  display: flex;
   max-width: 100%;
   padding: 0 1%;
 }
+
+#filters-section .images-container img {
+  display: block;
+  max-width: 100%;
+}
+
 
 @media only screen and (max-width: 760px) {
   #filters-section {
@@ -304,6 +328,7 @@ header .mobile {
   }
 
   #filters-section .content {
+    padding: 0 .625rem;
     margin-bottom: 1rem;
   }
 
@@ -332,36 +357,37 @@ header .mobile {
 
 #quotes-section {
   background-color: #f3f3f3;
+  text-align: center;
 }
 
-#quotes-section content {
+#quotes-section .contentcenter  {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
-  font-family: "Palatino", serif;
+  font-family: "Palatino-italic", sans-serif;
   font-size: 1.875rem;
   line-height: 1.1;
   font-style: italic;
   color: #4a4a4a;
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
 }
 
 @media only screen and (max-width: 760px) {
-  #quotes-section content {
+  #quotes-section .contentcenter {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
     margin: auto;
